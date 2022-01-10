@@ -23,3 +23,24 @@
     height: 75px;
     width: auto;
 }
+
+@media screen and (max-width: 575px) 
+{
+    #logo
+    {
+        width:64%;
+        height:auto;
+    }
+    
+    #button_box
+    {
+        width:100%;
+        height:auto;
+        border-radius: 0px;
+    }
+
+    .index_button
+    {
+        margin: 25px 15px 25px 15px !important;
+    }
+}
