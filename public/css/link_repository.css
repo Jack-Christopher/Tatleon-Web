@@ -1,4 +1,5 @@
-.hello
+.jumbotron
 {
-    background-color: aqua !important;
+    background-color: #e0e0eb;
+    border-radius: 20px;
 }
