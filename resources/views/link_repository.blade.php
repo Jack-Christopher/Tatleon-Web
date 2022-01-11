@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title> Repositorio de Enlaces </title>
     <!-- Scripts -->
-    <script src="{{ asset(mix('js/app.js')) }}" defer></script>
+    <script src="{!! asset('bootstrap/js/bootstrap.min.js') !!}"></script>
     <!-- Styles -->
-    <link href="{{ asset(mix('css/app.css')) }}" rel="stylesheet">
+    <link rel="stylesheet" href="{!! asset('bootstrap/css/bootstrap.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/link_repository.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/navbar.css') !!}">
 </head>
