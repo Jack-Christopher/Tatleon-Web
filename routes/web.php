@@ -36,3 +36,7 @@ Route::get('/services/link_repository/school/{escuela_id}', function ($escuela_i
         ->get();
     return view('school')->with('escuela', $escuela)->with('enlaces', $enlaces);
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

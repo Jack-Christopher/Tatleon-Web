@@ -34,10 +34,10 @@
                 </li>
             </ul>
             <span class="navbar-text">
-                <a class="nav-link" href="/register">Registrarse</a>
+            <a class="nav-link" href="/login">Iniciar Sesión</a>
             </span>
             <span class="navbar-text">
-                <a class="nav-link" href="/login">Iniciar Sesión</a>
+                <a class="nav-link" href="/register">Registrarse</a>
             </span>
             </div>
         </div>
