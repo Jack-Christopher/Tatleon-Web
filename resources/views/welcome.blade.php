@@ -50,12 +50,38 @@
                     <a class="nav-link" href="/about">Acerca </a>
                     </li>
                 </ul>
+
+                <ul class="navbar-nav ms-auto">
+                @auth
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle navbar-text" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->first_name }}
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                            {{ __('Cerrar Sesión') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+
+                @else
                 <span class="navbar-text">
                     <a class="nav-link" href="/login">Iniciar Sesión</a>
                 </span>
                 <span class="navbar-text">
                     <a class="nav-link" href="/register">Registrarse</a>
                 </span>
+                @endauth
+                </ul>
+
+
                 </div>
             </div>
         </nav>
@@ -66,14 +92,14 @@
             <img src="{!! asset('img/unsa_logo.png') !!}" alt="UNSA Logo" id="logo">
         </div>
 
-        @if (1==1)
+        @auth
         <?php
         echo "<br>";
         echo "<div class=\"container\" align=\"center\">";
-        echo "<h3 class=\"display-5\" > Bienvenido(a) " . "</h3>";
+        echo "<h3 class=\"display-5\" > Bienvenido(a) " . Auth::user()->first_name . "</h3>";
         echo "</div>";
         ?>
-        @endif
+        @endauth
 
 
         <div class="container" align="center">
