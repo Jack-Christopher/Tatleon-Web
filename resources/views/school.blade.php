@@ -1,54 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title> {{$escuela->nombre}} </title>
-    <!-- Scripts -->
-    <script src="{!! asset('bootstrap/js/bootstrap.min.js') !!}"></script>
-    <!-- Styles -->
-    <link rel="stylesheet" href="{!! asset('bootstrap/css/bootstrap.min.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/navbar.css') !!}">
-</head>
+@extends('layouts.services')
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light"  >
-        <div class="container-fluid">
-            <a class="navbar-brand" >Tatleon</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Inicio</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/services">Servicios</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/support">Soporte</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/about">Acerca </a>
-                </li>
-            </ul>
-            <span class="navbar-text">
-            <a class="nav-link" href="/login">Iniciar Sesión</a>
-            </span>
-            <span class="navbar-text">
-                <a class="nav-link" href="/register">Registrarse</a>
-            </span>
-            </div>
-        </div>
-    </nav>
+@section('title')
+    {{$school->name}}
+@endsection
 
-    <br>
+@section('scripts')
+@endsection
 
-    
+@section('styles')
+@endsection
 
-
+@section('content')
     <div class="container">
-    <h1 class="display-3"> Enlaces de {{$escuela->nombre}} </h1>
+    <h1 class="display-3"> Enlaces de {{$school->name}} </h1>
     <br>
 
     <table class="table table-hover table-bordered">
@@ -63,9 +27,9 @@
       </thead>
       <tbody>
         <?php
-        if (count($enlaces) > 0) 
+        if (count($links) > 0) 
         {
-          foreach ($enlaces as $row) 
+          foreach ($links as $row) 
           {
             echo "<tr>";
             echo "<th scope=\"row\">" . $row['id'] . "</th>";
@@ -97,4 +61,4 @@
 
   </div>
 
-</body>
+@endsection

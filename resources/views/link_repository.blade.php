@@ -1,53 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title> Repositorio de Enlaces </title>
-    <!-- Scripts -->
-    <script src="{!! asset('bootstrap/js/bootstrap.min.js') !!}"></script>
-    <!-- Styles -->
-    <link rel="stylesheet" href="{!! asset('bootstrap/css/bootstrap.min.css') !!}">
+@extends('layouts.services')
+
+@section('title')
+    Repositorio de Enlaces
+@endsection
+
+@section('scripts')
+@endsection
+
+@section('styles')
     <link rel="stylesheet" href="{!! asset('css/link_repository.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/navbar.css') !!}">
-</head>
+@endsection
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light"  >
-        <div class="container-fluid">
-            <a class="navbar-brand" >Tatleon</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Inicio</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/services">Servicios</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/support">Soporte</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/about">Acerca </a>
-                </li>
-            </ul>
-            <span class="navbar-text">
-            <a class="nav-link" href="/login">Iniciar Sesión</a>
-            </span>
-            <span class="navbar-text">
-                <a class="nav-link" href="/register">Registrarse</a>
-            </span>
-            </div>
-        </div>
-    </nav>
-
-    <br>
+@section('content')
 
     <div class="container">
 
-@if (isset($escuelas))
+    @if (isset($schools))
     <table class="table table-hover table-bordered">
         <thead>
             </tr>
@@ -58,14 +26,14 @@
         </thead>
         <tbody>
             <?php
-            if ($escuelas != null) 
+            if ($schools != null) 
             {
-                foreach ($escuelas as $escuela) 
+                foreach ($schools as $school) 
                 {
                     echo "<tr>";
-                    echo "<th scope=\"row\">" . $escuela->id . "</th>";
-                    echo "<td>" . $escuela->nombre . "</td>";
-                    echo "<td> <a href=\"school/" . $escuela->id . "\" class=\"btn btn-success\"> Explorar</a> </td>";
+                    echo "<th scope=\"row\">" . $school->id . "</th>";
+                    echo "<td>" . $school->name . "</td>";
+                    echo "<td> <a href=\"school/" . $school->id . "\" class=\"btn btn-success\"> Explorar</a> </td>";
                     echo "</tr>";
                 }
             }
@@ -73,7 +41,7 @@
         </tbody>
     </table>
 
-@else
+    @else
     <?php
         echo "<br>";
         echo "<div class=\"jumbotron\"  align=\"center\">";
@@ -89,7 +57,8 @@
         echo "</div>";
         echo "<br>";
     ?>
-@endif
+    @endif  
 
 </div>
-</body>
+
+@endsection
