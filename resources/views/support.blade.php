@@ -1,7 +1,7 @@
 @extends('layouts.services')
 
 @section('title')
-    Servicios
+    Soporte
 @endsection
 
 @section('scripts')
