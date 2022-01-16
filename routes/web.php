@@ -42,3 +42,5 @@ Route::get('services/link_repository/school/{school_id}/add_link', function ($sc
     $school = App\Models\School::find($school_id);
     return view('add_link', compact('school'));
 })->middleware('auth');
+
+Route::view('services', 'services');
