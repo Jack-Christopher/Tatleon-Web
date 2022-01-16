@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome')->name('welcome');
 
 Route::view('/services/link_repository', 'link_repository');
 
@@ -29,14 +27,18 @@ Route::get('/services/link_repository/{area}', function ($area) {
     return view('link_repository')->with('schools', $schools);
 });
 
-Route::get('/services/link_repository/school/{school_id}', function ($school_id) {
-    $school = App\Models\School::find($school_id);
-    $links = App\Models\Link::where('school_id', $school_id)
-        ->orderBy('id')
-        ->get();
-    return view('school')->with('school', $school)->with('links', $links);
-});
+Route::get('/services/link_repository/school/{school_id}', [App\Http\Controllers\SchoolController::class, 'index'])->name('school');
+Route::post('/services/link_repository/school/add_link', [App\Http\Controllers\SchoolController::class, 'addLink'])->name('add_link');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/account', [App\Http\Controllers\AccountController::class, 'index'])->middleware('auth')->name('account');
+Route::post('/account', [App\Http\Controllers\AccountController::class, 'userSchool'])->name('user_school');
+
+Route::get('services/link_repository/school/{school_id}/add_link', function ($school_id) {
+    $school = App\Models\School::find($school_id);
+    return view('add_link', compact('school'));
+})->middleware('auth');

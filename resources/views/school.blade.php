@@ -33,11 +33,10 @@
           {
             echo "<tr>";
             echo "<th scope=\"row\">" . $row['id'] . "</th>";
-            echo "<td>" . $row['nombre'] . "</td>";
+            echo "<td>" . $row['name'] . "</td>";
 
-            echo "<td>" . $row['descripcion'] . "</td>";
-
-            echo "<td> <a href=\"" .  $row['url'] . "\" class=\"btn btn-success\"> Visitar</a> </td>";
+            echo "<td>" . $row['description'] . "</td>";
+            echo "<td> <a href=\"" .  $row['url'] . "\" target=\"_blank\" class=\"btn btn-success\"> Visitar</a> </td>";
             echo "</tr>";
           }
         }
@@ -52,11 +51,23 @@
     </table>
 
     <?php 
-        echo '<div class="alert alert-info" role="alert" align="center">';
-        echo "<h4> Puedes ingresar tus propios enlaces para aumentar la información ofrecida por la página </h4>";
-        // boostrap button
-        // echo '<a href="' . url('/enlaces/create') . '" class="btn btn-info"> Agregar enlace </a>';
-        echo "</div>";
+        if ($is_my_school)
+        {
+            $url = $_SERVER['REQUEST_URI'] . '/add_link';
+            // echo div align right
+            echo "<div class=\"container\" align=\"right\">";
+            echo '<a href="' .  $url . '" class="btn btn-success"> Agregar enlace </a>';
+            echo "</div><br>";
+            echo '<div class="alert alert-dark" role="alert" align="center">';
+            echo "<h4> Puedes ingresar tus propios enlaces para aumentar la información ofrecida por la página </h4>";
+            echo "</div>";
+        }
+        else
+        {
+            echo '<div class="alert alert-dark" role="alert" align="center">';
+            echo "<h4> Solo puedes agregar enlaces a tus propias escuelas </h4>";
+            echo "</div>";
+        }
     ?>
 
   </div>
