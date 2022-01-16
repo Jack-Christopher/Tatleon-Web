@@ -46,3 +46,5 @@ Route::get('services/link_repository/school/{school_id}/add_link', function ($sc
 Route::view('services', 'services');
 
 Route::view('support', 'support');
+
+Route::view('about', 'about');
