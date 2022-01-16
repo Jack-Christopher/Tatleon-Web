@@ -32,6 +32,7 @@ class SchoolController extends Controller
                     if ($user_school->school_id == $school_id) 
                     {
                         $status = "my_school";
+                        break;
                     }
                 }
             }
