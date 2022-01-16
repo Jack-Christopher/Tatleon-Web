@@ -44,3 +44,5 @@ Route::get('services/link_repository/school/{school_id}/add_link', function ($sc
 })->middleware('auth');
 
 Route::view('services', 'services');
+
+Route::view('support', 'support');
