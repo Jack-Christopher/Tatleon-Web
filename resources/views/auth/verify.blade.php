@@ -1,4 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
+
+@section('title')
+    Verificación de Cuenta de {{ Auth::user()->first_name }}
+@endsection
+
+@section('back_url')
+    <a href="{{ route('welcome') }}">
+@endsection
 
 @section('content')
 <div class="container">

@@ -29,7 +29,16 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = RouteServiceProvider::HOME;
+    protected function redirectTo()
+    {
+        // if email_verified at is null redirect to verify
+        $user = User::where('email', request()->email)->first();
+        if ($user->email_verified_at == null) {
+            return route('verification');
+        }
+        return route('welcome');
+    }
 
     /**
      * Create a new controller instance.
