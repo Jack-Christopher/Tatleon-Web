@@ -8,6 +8,8 @@ use App\Http\Controllers\HomeController as Home_;
 use App\Http\Controllers\AccountController as Account_;
 use App\Http\Controllers\Auth\VerificationController as Verification_;
 use App\Http\Controllers\WelcomeController as Welcome_;
+use App\Http\Controllers\TeacherRecordController as TeacherRecord_;
+use App\Http\Controllers\CommentController as Comment_;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +27,15 @@ Route::get('/', [Welcome_::class, 'index'])->name('welcome');
 
 Route::view('/services/link_repository', 'link_repository');
 Route::get('/services/link_repository/{area}', [LinkRepository_::class, 'index'])->name('link_repository');
-
 Route::get('/services/link_repository/school/{school_id}', [School_::class, 'index'])->name('school');
 Route::get('services/link_repository/school/{school_id}/add_link', [School_::class, 'addLinkView'])->middleware('auth')->name('add_link');
 Route::post('/services/link_repository/school/add_link', [School_::class, 'addLink'])->name('add_link');
+
+// services/teacher_record
+Route::get('/services/teacher_record', [TeacherRecord_::class, 'index'])->name('teacher_record');
+Route::post('/services/teacher_record', [TeacherRecord_::class, 'add_teacher'])->name('add_teacher');
+Route::get('/services/teacher_record/add_comment/{teacher_id}', [Comment_::class, 'index'])->middleware('auth')->name('comment');
+Route::post('/services/teacher_record/add_comment', [Comment_::class, 'add_comment'])->middleware('auth')->name('add_comment');
 
 Auth::routes();
 Route::get('/home', [Home_::class, 'index'])->name('home');
