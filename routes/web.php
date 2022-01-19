@@ -10,6 +10,8 @@ use App\Http\Controllers\Auth\VerificationController as Verification_;
 use App\Http\Controllers\WelcomeController as Welcome_;
 use App\Http\Controllers\TeacherRecordController as TeacherRecord_;
 use App\Http\Controllers\CommentController as Comment_;
+use App\Http\Controllers\SharedResourcesController as SharedResources_;
+use App\Http\Controllers\CourseController as Course_;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,26 +33,26 @@ Route::get('/services/link_repository/school/{school_id}', [School_::class, 'ind
 Route::get('services/link_repository/school/{school_id}/add_link', [School_::class, 'addLinkView'])->middleware('auth')->name('add_link');
 Route::post('/services/link_repository/school/add_link', [School_::class, 'addLink'])->name('add_link');
 
-// services/teacher_record
 Route::get('/services/teacher_record', [TeacherRecord_::class, 'index'])->name('teacher_record');
 Route::post('/services/teacher_record', [TeacherRecord_::class, 'add_teacher'])->name('add_teacher');
 Route::get('/services/teacher_record/add_comment/{teacher_id}', [Comment_::class, 'index'])->middleware('auth')->name('comment');
 Route::post('/services/teacher_record/add_comment', [Comment_::class, 'add_comment'])->middleware('auth')->name('add_comment');
 
-Auth::routes();
-Route::get('/home', [Home_::class, 'index'])->name('home');
+Route::get('/services/shared_resources', [SharedResources_::class, 'index'])->name('shared_resources');
+// Route::get('/services/shared_resources/{id}', [SharedResources_::class, 'by_id'])->name('shared_resources_id');
+Route::get('/services/shared_resources/course/{id}', [Course_::class, 'index'])->name('course');
+Route::get('/services/shared_resources/add_resource/{course_id}', [Course_::class, 'resource'])->middleware('auth')->name('resource');
+Route::post('/services/shared_resources/add_resource', [Course_::class, 'add_resource'])->middleware('auth')->name('add_resource');
+
 
 Route::get('/account', [Account_::class, 'index'])->middleware('auth')->name('account');
 Route::post('/account', [Account_::class, 'userSchool'])->name('user_school');
-
 Route::view('services', 'services');
 Route::view('support', 'support');
 Route::view('about', 'about');
 
 
-
-// A route to display the email verification notification to the user with a link to verify email.
-// A route to handle the user-click event to verify email.
-// A route to resend email on user’s request.
+Auth::routes();
 Auth::routes(['verify' => true]);
+Route::get('/home', [Home_::class, 'index'])->name('home');
 Route::get('/verify', [Verification_::class, 'index'])->middleware('auth')->name('verification');
