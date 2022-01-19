@@ -25,38 +25,34 @@
             </tr>
         </thead>
         <tbody>
-            <?php
-            if ($schools != null) 
-            {
-                foreach ($schools as $school) 
-                {
-                    echo "<tr>";
-                    echo "<th scope=\"row\">" . $school->id . "</th>";
-                    echo "<td>" . $school->name . "</td>";
-                    echo "<td> <a href=\"school/" . $school->id . "\" class=\"btn btn-success\"> Explorar</a> </td>";
-                    echo "</tr>";
-                }
-            }
-            ?>
+            @forelse($schools as $school) 
+                <tr>
+                    <th scope="row">{{ $school->id }}</th>
+                    <td>{{ $school->name }}</td>
+                    <td> <a href="school/{{ $school->id }}" class="btn btn-success"> Explorar</a> </td>
+                </tr>
+            @empty
+                <tr>
+                    <td colspan="3">No hay registros</td>
+                </tr>
+            @endforelse
         </tbody>
     </table>
 
     @else
-    <?php
-        echo "<br>";
-        echo "<div class=\"jumbotron\"  align=\"center\">";
-        echo "<br>";
-        echo "<h6 class=\"display-6\"> Áreas de la Universidad Nacional de San Agustín </h6>";
-        echo "<br><br>";
-        echo "<a href=\"link_repository/ing\" class=\"btn btn-success btn-lg\">Ingenierías</a>";
-        echo "<br><br>";
-        echo "<a href=\"link_repository/bio\" class=\"btn btn-warning btn-lg\">Biomédicas</a>";
-        echo "<br><br>";
-        echo "<a href =\"link_repository/soc\" class=\"btn btn-danger btn-lg\">Sociales</a>";
-        echo "<br><br>";    
-        echo "</div>";
-        echo "<br>";
-    ?>
+    <br>
+    <div class="jumbotron"  align="center">
+        <br>
+        <h6 class="display-6"> Áreas de la Universidad Nacional de San Agustín </h6>
+        <br><br>
+        <a href="link_repository/ing" class="btn btn-success btn-lg">Ingenierías</a>
+        <br><br>
+        <a href="link_repository/bio" class="btn btn-warning btn-lg">Biomédicas</a>
+        <br><br>
+        <a href ="link_repository/soc" class="btn btn-danger btn-lg">Sociales</a>
+        <br><br>
+    </div>
+    <br>
     @endif  
 
 </div>
