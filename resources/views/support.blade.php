@@ -13,7 +13,16 @@
 @section('content')
 
 <div class="container jumbotron">
-    <h1 class="display-3"> Medios de Contacto</h1>
+    <div class="alert alert-secondary" role="alert">
+      <h1 class="display-5" align="center"> Equipo de Trabajo</h1>
+      <h4>The Delta Team</h4>
+      <p>
+        Este proyecto fue desarrollado por los estudiantes miembros de "The Delta Team" de la carrera de Ciencias de la Computación
+        de la Universidad Nacional de San Agustín, el cual se empezó en la segunda mitad del año 2021.
+      </p>
+    </div>
+
+    <h2 align="center"> Medios de Contacto</h2>
     <br>
 
     <table class="table table-hover table-bordered">
@@ -47,7 +56,8 @@
         </tr>
       </tbody>
     </table>
+
+    <br>
   </div>
-
-
+  <br>
 @endsection
