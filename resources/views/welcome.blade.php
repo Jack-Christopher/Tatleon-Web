@@ -18,14 +18,11 @@
         </div>
 
         @auth
-        <?php
-        echo "<br>";
-        echo "<div class=\"container\" align=\"center\">";
-        echo "<h3 class=\"display-5\" > Bienvenido(a) " . Auth::user()->first_name . "</h3>";
-        echo "</div>";
-        ?>
+        <br>
+        <div class="container" align="center">
+            <h3 class="display-5" > Bienvenido(a) {{ Auth::user()->first_name }}</h3>
+        </div>
         @endauth
-
 
         <div class="container" align="center">
             <br>
@@ -37,7 +34,7 @@
                     <a href="services/teacher_record" class="btn btn-danger"> Registro de Docentes</a>
                     <a href="services/shared_resources" class="btn btn-warning"> Recursos Compartidos</a>
                     <br>
-                    <a href="#" class="btn btn-primary index_button"> Coming soon... </a>
+                    <a href="services/external_help" class="btn btn-primary index_button"> Ayuda Externa </a>
                     <a href="#" class="btn btn-danger index_button"> Coming soon... </a>
                     <a href="#" class="btn btn-warning index_button"> Coming soon... </a>
                     <br>
