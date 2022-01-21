@@ -18,7 +18,7 @@ class CreateCourseSchoolTable extends Migration
             $table->integer('course_id');
             $table->integer('school_id');
             $table->unique(['course_id', 'school_id']);
-            $table->timestamps();
+            // $table->timestamps();
         });
     }
 

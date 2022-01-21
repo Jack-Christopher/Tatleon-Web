@@ -12,7 +12,7 @@
 
 @section('content')
 <div class="container">
-    <h1 class="display-3"> Recursos de {{$course->name}} </h1>
+    <h5 class="display-5"> Recursos de {{$course->name}} </h5>
     <br>
     <div class="alert alert-warning" role="alert" align="center">
         <strong>¡Atención!</strong>
@@ -50,6 +50,7 @@
     </table>
 
     @auth
+        @if ($is_my_course)
         <div class="row" align="right">
             <div class="col-md-12">
                 <a href={{"/services/shared_resources/add_resource/".$course->id}} class="btn btn-primary">
@@ -58,6 +59,7 @@
                 </a>
             </div>
         </div>
+        @endif
     @endauth
 
 

@@ -40,6 +40,7 @@ Route::get('/services/teacher_record/add_comment/{teacher_id}', [Comment_::class
 Route::post('/services/teacher_record/add_comment', [Comment_::class, 'add_comment'])->middleware('auth')->name('add_comment');
 
 Route::get('/services/shared_resources', [SharedResources_::class, 'index'])->name('shared_resources');
+Route::get('/services/shared_resources/school', [SharedResources_::class, 'by_school'])->name('by_school');
 Route::get('/services/shared_resources/course/{id}', [Course_::class, 'index'])->name('course');
 Route::get('/services/shared_resources/add_resource/{course_id}', [Course_::class, 'resource'])->middleware('auth')->name('resource');
 Route::post('/services/shared_resources/add_resource', [Course_::class, 'add_resource'])->middleware('auth')->name('add_resource');
