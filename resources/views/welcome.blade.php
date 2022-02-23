@@ -24,6 +24,14 @@
         </div>
         @endauth
 
+        @if (isset($message))
+            <div class="container" align="center">
+                <div class="alert alert-success" role="alert">
+                    {{ $message }}
+                </div>
+            </div>
+        @endif
+
         <div class="container" align="center">
             <br>
 
