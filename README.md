@@ -1,66 +1,106 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+Tatleon Web
+=========
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Tatleon es un sitio web que permite a los usuarios tanto estudiantes como docentes de la Universidad Nacional de San Agustín, poder acceder a una serie de servicios muy útiles para un mejor desenvolvimiento en la Universidad, de poder crear recursos y modificarlos. Además de extender este acceso en modo de solo lectura para cualquier persona que pueda acceder a la página (que no sea ni estudiante ni docente de la UNSA).
 
-## About Laravel
+Puede encontrar la página en el siguiente enlace: [Ir a Página Web](http://www.tatleon.ultihost.net/)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Los servicios disponibles se enlistan a continuación:  
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Repositorio de Enlaces
+----------------------
 
-## Learning Laravel
+##### Propósito:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Almacenar y poner a disposición enlaces de trabajos realizados por los estudiantes de la Universidad Nacional de San Agustín que han sido subidos a otras plataformas con el propósito de difundirlo entre los estudiantes de la UNSA y puedan tener una mayor cantidad de reacciones.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+##### Funcionamiento:
 
-## Laravel Sponsors
+Solo las personas que se hayan registrado en Tatleon Web podrán ingresar enlaces relativos a su escuela, los cuales serán almacenados en la plataforma.  
+Cualquier persona (sin necesidad de registrarse), podrá ver los enlaces almacenados en su totalidad.  
+  
+No podrán subir enlaces a la Vista de una escuela:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+*   Los que no se hayan registrado
+*   Los que no pertenezcan a esa escuela
 
-### Premium Partners
+Registro de Docentes
+--------------------
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+##### Propósito:
 
-## Contributing
+Almacenar y poner a disposición el "Registro" de los docentes, ésto es, una serie de datos importantes sobre los docentes como su preparación profesional y además un conjunto de comentarios subidos por los estudiantes que hayan llevado los cursos dictados por estos docentes de la Universidad Nacional de San Agustín.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+##### Funcionamiento:
 
-## Code of Conduct
+Los docentes podrán subir los datos que quisieran hacer público de sí mismos. Solo los usuarios registrados como estudiantes podrán ingresar un comentario sobre los docentes que ya se encuentren en la plataforma.  
+**Se deben cumplir las siguientes reglas en la publicación de comentarios:**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+*   No se permiten comentarios que no se fundamenten en la realidad.
+*   No se permiten comentarios que atenten contra la moral, la ética o la dignidad de los docentes.
+*   No se permiten comentarios que tengan contenido sexual, racista, violento, amenazante, degradante o datos personales.
 
-## Security Vulnerabilities
+El usuario podrá ver todos los comentarios almacenados en la plataforma.  
+  
+No podrán subir comentarios sobre un docente:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+*   Los que no se hayan registrado
 
-## License
+Recursos Compartidos
+--------------------
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+##### Propósito:
+
+Almacenar y poner a disposición Recursos Académicos subidos por los estudiantes de la Universidad Nacional de San Agustín. Con el propósito de que los estudiantes que están en grados inferiores o en otras escuelas/facultades puedan estudiar y/o practicar con anticipación y tener una educación más integral complementando con estos recursos los cursos que estén llevando.
+
+##### Funcionamiento:
+
+La idea es que cualquier estudiante que esté llevando el curso cree una carpeta en Google Drive dentro de la cual suba recursos que considere útiles para el curso. Lo que debe subir a esta plataforma es el enlace de la carpeta en Google Drive. Cualquier usuario podrá ver todos los recursos almacenados en la plataforma.  
+**Se deben cumplir las siguientes reglas en la publicación de recursos:**
+
+*   No se permiten recursos que infringan derechos de autor.
+*   No se permiten recursos que atenten contra la moral, la ética o la dignidad de los estudiantes.
+*   No se permiten recursos que tengan contenido sexual, racista, violento, amenazante, degradante o que contengan datos personales.
+
+  
+No podrán subir Recursos de un curso:
+
+*   Los que no se hayan registrado
+*   Los que no sean delegados
+
+Ayuda Externa
+-------------
+
+##### Propósito:
+
+Almacenar y poner a disposición peticiones de ayuda académica de los estudiantes de la Universidad Nacional de San Agustín. Con el propósito de que algún estudiante que pueda ayudarlo academicamente se ponga en contacto con los estudiantes.
+
+##### Funcionamiento:
+
+###### ¿Qué se entiende por Ayuda Académica?
+
+Ayuda académica se entiende como la ayuda que un estudiante puede brindar a otro estudiante de la misma escuela o de otra escuela para la realización de trabajos o proyectos, lecciones, orientación o en otras actividades que pueden ser remuneradas previo acuerdo de los estudiantes.
+
+La idea es que cualquier estudiante pueda solicitar ayuda académica publicamente para que algún estudiante que tenga la posibilidad de ayudarlo pueda hacerlo. Cualquier usuario podrá ver todos las peticiones de ayuda registradas en la plataforma.  
+**Se deben cumplir las siguientes reglas en la publicación de peticiones de ayuda:**
+
+*   No se permiten peticiones de ayuda que sean falsos o de broma.
+*   No se permiten peticiones de ayuda que atenten contra la moral, la ética o la dignidad de los estudiantes.
+*   No se permiten peticiones de ayuda que tengan contenido sexual, racista, violento, amenazante, degradante o que contengan datos personales.
+
+  
+No podrán pedir Ayuda Académica:
+
+*   Los que no se hayan registrado
+
+Coming soon...
+--------------
+
+Pronto estaremos implementando nuevos servicios.
+
+  
+
+Puedes dejar tus sugerencias en el siguiente formulario.
+
+[Ir a Formulario](https://forms.gle/ypVaTyf5dG8BZHtL6)
