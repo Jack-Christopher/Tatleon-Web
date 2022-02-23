@@ -70,7 +70,7 @@ class SchoolController extends Controller
     public function addLinkView($school_id)
     {
         $school = School::find($school_id);
-        return view('add_link', compact('school'));
+        return view('link', compact('school'));
     }
 
 }
