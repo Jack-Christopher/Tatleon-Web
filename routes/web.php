@@ -31,7 +31,7 @@ Route::get('/', [Welcome_::class, 'index'])->name('welcome');
 Route::view('/services/link_repository', 'link_repository');
 Route::get('/services/link_repository/{area}', [LinkRepository_::class, 'index'])->name('link_repository');
 Route::get('/services/link_repository/school/{school_id}', [School_::class, 'index'])->name('school');
-Route::get('services/link_repository/school/{school_id}/add_link', [School_::class, 'addLinkView'])->middleware('auth')->name('add_link');
+Route::get('services/link_repository/school/{school_id}/add_link', [School_::class, 'addLinkView'])->middleware('auth')->name('link');
 Route::post('/services/link_repository/school/add_link', [School_::class, 'addLink'])->name('add_link');
 
 Route::get('/services/teacher_record', [TeacherRecord_::class, 'index'])->name('teacher_record');
@@ -61,3 +61,14 @@ Auth::routes();
 Auth::routes(['verify' => true]);
 Route::get('/home', [Home_::class, 'index'])->name('home');
 Route::get('/verify', [Verification_::class, 'index'])->middleware('auth')->name('verification');
+
+
+Route::get('/admin/{item}/{action}', function ($item, $action) {
+    if (auth()->user()->user_type < 3) {
+        return redirect()->route('welcome');
+    }
+    $exitCode = Artisan::call( $item . ':' . $action);
+    $message = $item . ':' . $action . ' executed';
+    return view('welcome', compact('exitCode', 'message'));
+
+})->middleware('auth');
