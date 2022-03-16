@@ -27,7 +27,7 @@
                 <label for="url">Descripción</label>
                 <input type="text" class="form-control" id="description" name="description" placeholder="Descripción del recurso">
                 <label for="url">URL</label>
-                <input type="text" class="form-control" id="url" name="url" placeholder="URL del recurso" required>
+                <input autocomplete="off" autofill="off" type="text" class="form-control" id="url" name="url" placeholder="URL del recurso" required>
             </div>
 
             <br>
