@@ -104,3 +104,14 @@ Pronto estaremos implementando nuevos servicios.
 Puedes dejar tus sugerencias en el siguiente formulario.
 
 [Ir a Formulario](https://forms.gle/ypVaTyf5dG8BZHtL6)
+
+
+## Contributing
+
+We encourage you to contribute to Tatleon Web. Please check out the
+[Contributing to Tatleon Web guide](https://github.com/Jack-Christopher/Tatleon-Web/blob/master/CONTRIBUTING.md) for guidelines about how to proceed.
+
+
+## License
+
+Tatleon Web is released under the [MIT License](https://opensource.org/licenses/MIT).
