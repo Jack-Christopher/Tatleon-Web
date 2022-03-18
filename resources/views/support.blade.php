@@ -60,4 +60,14 @@
     <br>
   </div>
   <br>
+  <h1 class="display-5" align="center"> Contribución</h1>
+
+    <br>
+    <div class="container" align="center">
+        ¿Deseas contribuir con el desarrollo de este proyecto?
+        <br><br>
+        <a href="contributing" class="btn btn-success btn-lg btn-block" role="button"> Ver más detalles</a>
+    </div>
+    <br><br>
+
 @endsection

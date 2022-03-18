@@ -1,7 +1,7 @@
 @extends('layouts.services')
 
 @section('title')
-    Servicios
+    Documentación
 @endsection
 
 @section('scripts')
@@ -13,7 +13,7 @@
 @section('content')
 
 <div class="container">
-    <h1 class="display-3" align="center">Servicios</h1>
+    <h1 class="display-5" align="center">Servicios</h1>
     <br>
 
     <div class="alert alert-success" role="alert">

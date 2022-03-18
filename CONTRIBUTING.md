@@ -19,7 +19,7 @@
 
 #### **Did you fix whitespace, format code, or make a purely cosmetic patch?**
 
-Changes that are cosmetic in nature and do not add anything substantial to the stability, functionality, or testability of Tatleon Web will generally not be accepted (read more about [our rationales behind this decision](http://www.tatleon.ultihost.net/contributing/considerations)).
+Changes that are cosmetic in nature and do not add anything substantial to the stability, functionality, or testability of Tatleon Web will generally not be accepted (read more about [our rationales behind this decision](http://www.tatleon.ultihost.net/contributing#considerations)).
 
 #### **Do you intend to add a new feature or change an existing one?**
 
@@ -33,7 +33,7 @@ Changes that are cosmetic in nature and do not add anything substantial to the s
 
 #### **Do you want to contribute to the Rails documentation?**
 
-* Please read [Contributing to the Tatleon Web Documentation](http://www.tatleon.ultihost.net/contributing/documentation).
+* Please read [Contributing to the Tatleon Web Documentation](http://www.tatleon.ultihost.net/contributing#documentation).
 
 Tatleon Web is a volunteer effort. We encourage you to pitch in and join the team!
 

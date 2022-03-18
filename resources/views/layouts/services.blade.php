@@ -28,10 +28,10 @@
                 <a class="nav-link active" aria-current="page" href="/">Inicio</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/services">Servicios</a>
+                <a class="nav-link" href="/support">Soporte</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/support">Soporte</a>
+                <a class="nav-link" href="/documentation">Documentación</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="/about">Acerca </a>

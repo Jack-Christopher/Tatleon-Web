@@ -52,9 +52,10 @@ Route::post('/services/external_help/add_help', [ExternalHelp_::class, 'add_help
 
 Route::get('/account', [Account_::class, 'index'])->middleware('auth')->name('account');
 Route::post('/account', [Account_::class, 'userSchool'])->name('user_school');
-Route::view('services', 'services');
+Route::view('documentation', 'documentation');
 Route::view('support', 'support');
 Route::view('about', 'about');
+Route::view('contributing', 'contributing');
 
 
 Auth::routes();
