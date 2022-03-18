@@ -1,8 +1,0 @@
-.editorconfig
-.gitattributes
-.gitignore
-.styleci.yml
-composer.json
-package.json
-server.php
-webpack.mix.js
