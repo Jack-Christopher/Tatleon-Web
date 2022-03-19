@@ -23,7 +23,7 @@ Changes that are cosmetic in nature and do not add anything substantial to the s
 
 #### **Do you intend to add a new feature or change an existing one?**
 
-* Suggest your change [here](mailto:tatleonweb@gmail.com).
+* Suggest your change [here](https://forms.gle/ypVaTyf5dG8BZHtL6).
 
 * Do not open an issue on GitHub until you have goten positive answer about the change then start writing code. This is to avoid unnecessary work and to avoid the situation where a feature is being implemented but never accepted.
 
@@ -31,7 +31,7 @@ Changes that are cosmetic in nature and do not add anything substantial to the s
 
 * Ask any question about how to use Tatleon Web by sending an email [here](mailto:tatleonweb@gmail.com).
 
-#### **Do you want to contribute to the Rails documentation?**
+#### **Do you want to contribute to the Tatleon Web documentation?**
 
 * Please read [Contributing to the Tatleon Web Documentation](http://www.tatleon.ultihost.net/contributing#documentation).
 
