@@ -13,6 +13,7 @@ use App\Http\Controllers\CommentController as Comment_;
 use App\Http\Controllers\SharedResourcesController as SharedResources_;
 use App\Http\Controllers\CourseController as Course_;
 use App\Http\Controllers\ExternalHelpController as ExternalHelp_;
+use App\Http\Controllers\WelcomeFreshmanController as WelcomeFreshman_;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,9 +50,15 @@ Route::get('/services/external_help', [ExternalHelp_::class, 'index'])->name('ex
 Route::get('/services/external_help/add_help', [ExternalHelp_::class, 'add_help_view'])->middleware('auth')->name('help');
 Route::post('/services/external_help/add_help', [ExternalHelp_::class, 'add_help'])->middleware('auth')->name('add_help');
 
+Route::get('/services/welcome_freshman', [WelcomeFreshman_::class, 'index'])->name('welcome_freshman');
+Route::get('/services/welcome_freshman/school', [WelcomeFreshman_::class, 'by_school'])->name('welcome_freshman_by_school');
+Route::get('/services/welcome_freshman/school/{school_id}/edit', [WelcomeFreshman_::class, 'edit_view'])->middleware('auth')->name('welcome_freshman_edit_view');
+Route::post('/services/welcome_freshman/edit', [WelcomeFreshman_::class, 'edit'])->middleware('auth')->name('welcome_freshman_edit');
+
 
 Route::get('/account', [Account_::class, 'index'])->middleware('auth')->name('account');
 Route::post('/account', [Account_::class, 'userSchool'])->name('user_school');
+
 Route::view('documentation', 'documentation');
 Route::view('support', 'support');
 Route::view('about', 'about');

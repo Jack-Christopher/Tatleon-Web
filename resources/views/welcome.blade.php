@@ -43,7 +43,7 @@
                     <a href="services/shared_resources" class="btn btn-warning"> Recursos Compartidos</a>
                     <br>
                     <a href="services/external_help" class="btn btn-primary index_button"> Ayuda Externa </a>
-                    <a href="#" class="btn btn-danger index_button"> Coming soon... </a>
+                    <a href="services/welcome_freshman" class="btn btn-danger index_button"> Bienvenido Cachimbo </a>
                     <a href="#" class="btn btn-warning index_button"> Coming soon... </a>
                     <br>
                     <a href="#" class="btn btn-primary index_button"> Coming soon... </a>
