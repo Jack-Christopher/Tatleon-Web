@@ -6,6 +6,7 @@
 
 - [ ] Add  'school' field in 'resources' table
 - [ ] Refactor the website
+- [ ] Put the server messages at the top of the page instead of the bottom
 
 
 ### In Progress
