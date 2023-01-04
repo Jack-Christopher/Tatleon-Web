@@ -30,6 +30,23 @@
 
                 <label for="comment">Comentario</label>
                 <input type="text" class="form-control" id="comment" name="comment" placeholder="Comentario">
+
+                <!-- choose rating integer from 1 to 5 -->
+                <label for="rating">Calificación</label>
+                <select class="form-control" id="rating" name="rating" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <!-- select adjective from $adjectives -->
+                <label for="adjective">Característica</label>
+                <select class="form-control" id="adjective" name="adjective" required>
+                    @foreach($adjectives as $adjective)
+                        <option value="{{$adjective}}">{{$adjective}}</option>
+                    @endforeach
+                </select>
             </div>
 
             <br>

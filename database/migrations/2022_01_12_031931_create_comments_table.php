@@ -17,6 +17,8 @@ class CreateCommentsTable extends Migration
             $table->id();
             $table->string('comment', 5000);
             $table->integer('teacher_id');
+            $table->integer('rating');
+            $table->string('adjective', 20);
             $table->timestamps();
             $table->integer('made_by');
         });
